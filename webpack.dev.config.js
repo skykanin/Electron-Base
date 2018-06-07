@@ -3,6 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  entry: {
+    app: ['webpack-hot-middleware/client'],
+  },
+  devtool: 'eval-source-map',
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
@@ -12,7 +20,11 @@ module.exports = {
       ],
     }],
   },
-  plugins : [new HtmlWebpackPlugin({
+  plugins: [
+  new webpack.NamedModulesPlugin(),
+  new webpack.HotModuleReplacementPlugin(),
+  new HtmlWebpackPlugin({
     template: 'static/index.html'
-  })]
+  }),
+]
 }

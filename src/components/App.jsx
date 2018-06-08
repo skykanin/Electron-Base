@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 
 import {hot} from 'react-hot-loader';
@@ -14,6 +15,10 @@ const Wrapper = styled.section`
   background: papayawhip;
   padding: 4em;
 `;
+
+const x = "Hello";
+
+console.log(x);
 
 const App = () => {
   return(

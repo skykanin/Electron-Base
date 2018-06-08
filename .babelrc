@@ -1,7 +1,13 @@
 {
     "presets": [
-        ["env", {"modules": false}],
-        ["react"]
-    ]
+        ["@babel/env", {"modules": false}],
+        ["@babel/react"]
+    ],
+    "env": {
+      "test": {
+        "plugins": ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
+        "presets": [["@babel/env"], "@babel/react"]
+      }
+    }
     
 }

@@ -7,10 +7,10 @@ const path = require('path');
 const app = express();
 
 
-const configDev = require('./webpack.dev.config.js');
-const configProd = require('./webpack.prod.config.js')
-const config = webpackMerge(configProd, configDev);
-
+const configDev = require('./webpack.config.dev');
+const configBase = require('./webpack.config.base')
+const config = webpackMerge(configBase, configDev);
+console.log(config);
 const compiler = webpack(config);
 console.log(__dirname);
 // Tell express to use the webpack-dev-middleware and use the

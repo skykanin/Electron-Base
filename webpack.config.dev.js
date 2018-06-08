@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -11,20 +12,9 @@ module.exports = {
     contentBase: './dist',
     hot: true
   },
-  module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: [
-        'babel-loader',
-      ],
-    }],
-  },
+
   plugins: [
-  new webpack.NamedModulesPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
-  new HtmlWebpackPlugin({
-    template: 'static/index.html'
-  }),
-]
-}
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ]
+};

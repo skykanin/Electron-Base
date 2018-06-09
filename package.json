@@ -27,8 +27,6 @@
     "electron": "^2.0.2",
     "electron-devtools-installer": "^2.2.4",
     "express": "^4.16.3",
-    "flow": "^0.2.3",
-    "flow-babel-webpack-plugin": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.1.0",
     "react-hot-loader": "^4.3.0",

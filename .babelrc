@@ -2,6 +2,12 @@
     "presets": [
         ["env", {"modules": false}],
         ["react"]
-    ]
+    ],
+    "env": {
+      "test": {
+        "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }]],
+        "presets": [["env"], "react"]
+      }
+    }
     
 }

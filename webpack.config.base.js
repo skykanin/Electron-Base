@@ -23,8 +23,9 @@ module.exports = {
     
     new HtmlWebpackPlugin({
       template: 'static/index.html'
-    }),
+    })
   ],
+
   resolve: {
     extensions: ['.js', '.jsx'],
   },

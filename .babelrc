@@ -1,12 +1,12 @@
 {
     "presets": [
-        ["@babel/env", {"modules": false}],
-        ["@babel/react"]
+        ["env", {"modules": false}],
+        ["react"]
     ],
     "env": {
       "test": {
-        "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }], "transform-flow-comments"],
-        "presets": [["@babel/env"], "@babel/react"]
+        "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }]],
+        "presets": [["env"], "react"]
       }
     }
     

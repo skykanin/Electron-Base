@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
+
 module.exports = {
   entry: {
     app: ['./src/index.jsx'],
@@ -20,10 +22,10 @@ module.exports = {
     }],
   },
   plugins: [
-    
     new HtmlWebpackPlugin({
       template: 'static/index.html'
-    })
+    }),
+    new FlowBabelWebpackPlugin()
   ],
 
   resolve: {

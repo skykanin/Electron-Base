@@ -9,8 +9,6 @@
     "env": {
       "test": {
         "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }], "transform-flow-comments"],
-        "presets": [["env"], "react"]
       }
     }
-    
 }

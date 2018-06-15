@@ -1,7 +1,12 @@
 [ignore]
+.*/__mocks__/.*
 .*/__tests__/.*
+.*/dist/.*
+.*/flow-typed/.*
 .*/node_modules/.*
-.*index.jsx.*
+.*/static/.*
+.*main.js.*
+.*webpack.*
 [include]
 ./src
 [libs]
@@ -9,5 +14,5 @@ flow-typed
 [lints]
 
 [options]
-all=false
+all=true
 [strict]

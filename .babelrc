@@ -8,7 +8,7 @@
     ],
     "env": {
       "test": {
-        "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }], "transform-flow-comments"],
+        "plugins": ["transform-es2015-modules-commonjs", ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }], "transform-flow-comments"]
       }
     }
 }

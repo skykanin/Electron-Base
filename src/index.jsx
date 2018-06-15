@@ -1,8 +1,11 @@
-// @flow
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
 import App from './components/App'
 
+const root = document.getElementById("root");
 
-
-ReactDOM.render(<App/>, document.getElementById("root"));
+if (root) {
+    ReactDOM.render(<App/>, root);
+} else {
+    console.log("Cannot retreive root element");
+}

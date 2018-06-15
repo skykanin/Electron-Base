@@ -50,6 +50,9 @@
       "js",
       "jsx"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|my-project|redux-persist)/)"
+    ],
     "moduleDirectories": [
       "node_modules",
       "bower_components",
